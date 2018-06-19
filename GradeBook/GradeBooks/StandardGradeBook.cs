@@ -9,7 +9,7 @@ namespace GradeBook.GradeBooks
     public class StandardGradeBook : BaseGradeBook
     {
         // Constructor: it calls the base constructor(BaseGradeBook class's constructor) upon completion
-        public StandardGradeBook(string name) : base(name)
+        public StandardGradeBook(string name, bool condition) : base(name, condition)
         {
             Type = GradeBookType.Standard;
         }

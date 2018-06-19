@@ -15,11 +15,14 @@ namespace GradeBook.GradeBooks
         public List<Student> Students { get; set; }
         // New property Type of type GradeBookType enum
         public GradeBookType Type { get; set; }
+        public bool IsWeighted { get; set; }
 
-        public BaseGradeBook(string name)
+        // Constructor
+        public BaseGradeBook(string name, bool condition)
         {
             Name = name;
             Students = new List<Student>();
+            IsWeighted = condition;
         }
 
         public void AddStudent(Student student)
