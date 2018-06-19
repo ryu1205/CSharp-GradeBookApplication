@@ -26,13 +26,14 @@ namespace GradeBook.GradeBooks
             var grades = Students.OrderByDescending(e => e.AverageGrade).Select(e => e.AverageGrade).ToList() ;
             if (grades[thresold-1] <= averageGrade)
                 return 'A';
-            else if (grades[thresold * 2] - 1 <= averageGrade)
+            else if (grades[(thresold * 2)] - 1 <= averageGrade)
                 return 'B';
-            else if (grades[thresold * 3] - 1 <= averageGrade)
+            else if (grades[(thresold * 3)] - 1 <= averageGrade)
                 return 'C';
-            else if (grades[thresold * 4] - 1 <= averageGrade)
+            else if (grades[(thresold * 4)] - 1 <= averageGrade)
                 return 'D';
-            else return 'F';
+            else
+                return 'F';
 
             /*for (int i=0; grades.Count;i++)
             {
