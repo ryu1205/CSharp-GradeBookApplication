@@ -19,7 +19,7 @@ namespace GradeBook.GradeBooks
         public override char GetLetterGrade(double averageGrade)
         {
             if (Students.Count < 5)
-                throw new InvalidOperationException("Ranked grade requires at least 5 students");
+                throw new InvalidOperationException("(Ranked-grading requires a minimum of 5 students to work");
 
             var thresold = (int)Math.Ceiling(Students.Count*0.2);
 
